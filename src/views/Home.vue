@@ -48,6 +48,7 @@
         //     this.email = "";
         //     this.password = "";
         //   });
+        this.$router.push("/change_password");
       }
     }
   };
