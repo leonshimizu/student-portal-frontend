@@ -1,14 +1,10 @@
 <template>
-  <div class="verification">
+  <div class="login">
     <form v-on:submit.prevent="submit()">
-      <h1>Student Verification</h1>
+      <h1>Login</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
-      <div>
-        <label>Student ID:</label>
-        <input type="text" v-model="newSessionParams.student_id" />
-      </div>
       <div>
         <label>Email:</label>
         <input type="email" v-model="newSessionParams.email" />
