@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import ChangePassword from '../views/ChangePassword.vue'
+import UpdateResume from '../views/UpdateResume.vue'
+
 
 Vue.use(VueRouter)
 
@@ -29,6 +31,11 @@ const routes = [
     path: '/change_password',
     name: 'ChangePassword',
     component: ChangePassword
+  },
+  {
+    path: '/update_resume',
+    name: 'UpdateResume',
+    component: UpdateResume
   }
 ]
 
