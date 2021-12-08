@@ -38,15 +38,15 @@
     methods: {
       submit: function () {
         console.log("in the submit function - change password page");
-        // axios
-        //   .post("/users", this.editUserParams)
-        //   .then((response) => {
-        //     console.log(response.data);
-        //     this.$router.push("/login"); // goes to login page
-        //   })
-        //   .catch((error) => {
-        //     this.errors = error.response.data.errors;
-        //   });
+        axios
+          .patch(`/users/${localStorage.getItem('user_id')}`, this.editUserParams)
+          .then((response) => {
+            console.log(response.data);
+            this.$router.push("/login"); // goes to login page
+          })
+          .catch((error) => {
+            this.errors = error.response.data.errors;
+          });
       }
     }
   };
